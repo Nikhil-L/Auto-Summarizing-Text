@@ -20,6 +20,7 @@ def getTextfromPost(url):
 
 def summarize(text, n):
 	print('Summarizing your post')
+	text = text.replace('.', '. ')
 	sents = sent_tokenize(text)
 	assert n <= len(sents)
 	word_sent = word_tokenize(text.lower())
